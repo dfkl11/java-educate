@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 소수인지 아닌지 판별
+        // var num1 = prompt('숫자를 입력하세요');
+        // num1 = parseInt(num1)
+        // var i = 1;
+        // var number =[ ]
+        // var pNumber = 0;
+
+        while(i<=num1){
+            if(num1%i==0){
+                number.push(i)
+                pNumber += i
+            }
+            i++;
+        }
+        var num = number.join(',');
+        if(pNumber===num1+1&&number.length==2){
+            document.write(num1+'은 소수 '+num1+'-'+num)
+        } else{
+            document.write(num1+'은 소수가 아닙니다')
+        }
+
+        // 구구단 짝수 단만 출력
+        var i = 1;
+        var j = 2;
+        while(j<9){
+            while(i<=9){
+                document.write(j+'×'+i+'='+(i*j),"<br>")
+                i++;
+            }
+            document.write('<br>')
+            i = 1;
+            j = j+2;
+        }
+
+        
+        for(var k = 2; k < 9; k+=2) {
+            for(var l = 1; l<=9; l++) {
+                document.write(k+'×'+l+'='+(k*l),"<br>")              
+            }
+            document.write('<br>')
+            l=1;            
+        }
+    </script>
+</body>
+</html>

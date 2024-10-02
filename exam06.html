@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //구구단 홀수단 출력
+        var i = 1;
+        var j = 3;
+        
+        // while(j<=9){
+        //     while(i<=9){
+        //         document.write(j+'×'+i+'='+(j*i),"<br>")
+        //         i++;
+        //     }
+        //     document.write('<br>')
+        //     i = 1;
+        //     j = j+2;
+        // }
+        // for(var a=3; a<=9; a+=2){
+        //     for(var b=1; b<=9; b++){
+        //         document.write(a+'×'+b+'='+(a*b),"<br>")
+        //     }
+        //     document.write('<br>')
+        //     b=1;
+        // }
+
+        //구구단 내가 입력한 단부터 입력한 단까지 출력 ex(3, 5 입력) 3,4,5단 출력
+        var num1 = prompt('처음 출력할 단을 입력해주세요')
+        var num2 = prompt('이번에 입력한 단까지 출력됩니다')
+        num1 = parseInt(num1)
+        num2 = parseInt(num2)
+        // var i =1;
+        // if(num1>num2){
+        //     document.write('잘못된 입력값입니다(첫 입력값이 두번째 입력보다 낮아야합니다).')
+        // }
+        // while(num1<=num2){           
+        //     while(i<=9){
+        //         document.write(num1+'×'+i+'='+(num1*i),"<br>")
+        //         i++;
+        //     }
+        //     document.write('<br>')
+        //     i = 1;
+        //     num1++;
+        // }
+        
+        for(num1; num1<=num2; num1++){
+            for(var a=1; a<=9; a++){
+                document.write(num1+'×'+a+'='+(num1*a),"<br>")
+            }
+            document.write('<br>')
+            a = 1;
+        }
+    
+
+
+    </script>
+</body>
+</html>

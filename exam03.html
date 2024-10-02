@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var num = prompt('구구단 단수를 입력하세요');
+        // num = parseInt(num);
+        // var i = 1;
+        // while(i<=9){
+        //     document.write(num+'×'+i+'='+num*i,"<br>")
+        //     i++;
+        // }
+
+        // 시작 숫자부터 끝 숫자까지의 총합
+        var num1 = prompt('시작 숫자를 입력해주세요');
+        var num2 = prompt('끝 숫자를 입력해주세요');
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        var sum = 0;
+        document.write(num1+','+num2+'입력시 총 합->')
+        while(num1<=num2){
+            sum += num1
+            num1++;
+        }
+        document.write(sum)
+    </script>
+</body>
+</html>

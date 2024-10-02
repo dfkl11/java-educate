@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 입력한 숫자의 약수 및 갯수 출력
+        // var num1 = prompt('숫자를 입력하세요');
+        // num1 = parseInt(num1)
+        // var i=1;
+        // var number= [];
+        // var count=0;
+        // while(i<=num1){
+        //     if(num1%i==0){
+        //         number += i+','
+        //         count++;
+        //     }
+        //     i++;
+        // }
+        // document.write(num1+'의 약수는'+number+' '+count+'개') 
+
+        // 입력한 숫자의 완전수 판별
+        var num1 = prompt('숫자를 입력하세요');
+        num1 = parseInt(num1)
+        var i = 1;
+        var number =[ ]
+        var pNumber = 0;
+        while(i<num1){
+            if(num1%i==0){
+                number.push(i)
+                pNumber += i
+            }
+            i++;
+        }
+        var num = number.join('+');
+        if(num1===pNumber){
+            document.write(num1+'은 완전수 ='+num)
+        } else{
+            document.write(num1+'은 완전수가 아닙니다')
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //27. 이름, 나이, 키 입력받고 JSON데이터로 만든다음 출력
+        //  var human = {}
+        // human["name"]=prompt("이름을 입력하세요.: ")
+        // human["age"]=parseInt(prompt('나이를 입력하세요: '))
+        // human["height"]=parseFloat(prompt('키를 입력하세요: '))
+        // document.write(JSON.stringify(human, null, 2));
+
+        //28. 반복문으로 JSON 배열 출력
+        // var a = [ {name:"이민호",age:20,height:176.6},
+        //           {name:"정채연",age:21,height:164.2},
+        //           {name:"송중기",age:22,height:178.4} ] 
+        // for(let i=0; i<a.length; i++){
+        //     document.write(`${i+1}번째 사람 정보<br>${JSON.stringify(a[i], null, 2)}<br>`);
+        // }
+        // for(let i=0; i<a.length; i++){
+        //     for(let key in a[i]){
+        //         document.write(`${key}:${a[i][key]} `)
+        //     }
+        //     document.write("<br>")
+        // }
+        // a.forEach((person, index)=> {
+        //     document.write(`${index+1}번째 사람 정보<br>`);
+        //     document.write(`이름: ${person.name}, 나이: ${person.age}살, 키: ${person.height}cm<br><br>`)
+        // });
+
+        //29. N명의 사람정보를 입력받아 JSON배열을 생성한후 출력
+        humanNum = parseInt(prompt("정보를 입력할 사람 수를 입력: "))
+        people =[]
+        for(let i=0; i<humanNum; i++){
+            var info = {}                       
+            info["name"]=prompt("이름 입력-> ");
+            info["age"]=parseInt(prompt('나이 입력-> '));
+            info["height"]=parseFloat(prompt('키 입력-> '));
+            people.push(info);
+        }
+        document.write(JSON.stringify(people, null, 2)) //JSON데이터를 문자열로 변경 // 2칸 들여쓰기
+                                           //  replacer가 필요 없을 시  null사용  // null : 모든 속성을 포함하겠다는 의미.
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //입력한 값이 짝수인지 홀수인지 판별하는 함수
+        // function evenoddNumber(num){
+        //     if(num%2===0){
+        //         document.write(num+'은 짝수')
+        //     } else{
+        //         document.write(num+'은 홀수')
+        //     }
+        // }
+        // num1 = prompt('숫자를 입력하세요');
+        // num1 = parseInt(num1)
+        // evenoddNumber(num1)
+
+        // 입력한 값1 부터 값2 까지의 합을 구하는 함수
+        // function add(num1, num2){
+        //     var sum = 0;
+        //     document.write(num1+'부터 '+num2+' 까지의 합은= ')
+        //     while(num1<=num2){
+        //         sum+=num1;
+        //         num1++;
+        //     }
+        //     document.write(sum)
+        // }
+        // number1=prompt('숫자(정수) 를 입력해주세요')
+        // number2=prompt('숫자(정수, 처음 숫자보다 작은 수) 를 입력해주세요')
+        // add(parseInt(number1),parseInt(number2))
+
+        //최대 공약수 구하는 함수
+        // function GCF(num1, num2){
+        //     var cdNumber1 = []
+        //     if(num1>num2){
+        //         for(let i=1; i<=num2; i++){
+        //             if(num1%i==0&&num2%i==0){
+        //                 cdNumber1.push(i)
+        //             }
+        //         }               
+        //     }
+        //     if(num1<num2){
+        //         for(let i=1; i<=num1; i++){
+        //             if(num1%i==0&&num2%i==0){                    
+        //                 cdNumber1.push(i)
+        //             }
+        //         }     
+        //     }            
+        //     return Math.max(...cdNumber1)  
+        // }
+        // number1=prompt('숫자(정수) 를 입력해주세요')
+        // number2=prompt('숫자(정수) 를 입력해주세요')
+        // var gcdNumber = GCF(number1,number2)
+        // document.write("최대 공약수는: "+gcdNumber)
+    
+        //최소 공배수 구하는 함수
+        function LCM(num1, num2){
+            var cdNumber1 = []
+            if(num1>num2){
+                for(let i=1; i<=num2; i++){
+                    if(num1%i==0&&num2%i==0){
+                        cdNumber1.push(i)
+                    }
+                }               
+            }
+            if(num1<num2){
+                for(let i=1; i<=num1; i++){
+                    if(num1%i==0&&num2%i==0){                    
+                        cdNumber1.push(i)
+                    }
+                }     
+            }            
+            var lcmNum = (num1*num2)/Math.max(...cdNumber1)
+            return lcmNum              
+        }
+        number1=prompt('숫자(정수) 를 입력해주세요')
+        number2=prompt('숫자(정수) 를 입력해주세요')
+        var lCMNum = LCM(number1,number2)
+        document.write("최소 공배수는: "+lCMNum)
+
+
+    </script>
+</body>
+</html>
